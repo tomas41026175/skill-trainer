@@ -54,8 +54,11 @@ export default function DashboardPage() {
           throw new Error("資料載入失敗");
         }
 
-        const progressData: UserProgress[] = await progressRes.json();
-        const sessionsData: Session[] = await sessionsRes.json();
+        const progressJson = await progressRes.json();
+        const sessionsJson = await sessionsRes.json();
+
+        const progressData: UserProgress[] = progressJson.data ?? [];
+        const sessionsData: Session[] = sessionsJson.data ?? [];
 
         setProgressList(progressData);
         setSessions(sessionsData);

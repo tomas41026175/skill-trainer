@@ -26,8 +26,8 @@ export default function HistoryPage() {
         const res = await fetch("/api/sessions", { headers });
         if (!res.ok) throw new Error("資料載入失敗");
 
-        const data: Session[] = await res.json();
-        setSessions(data);
+        const json = await res.json();
+        setSessions(json.data ?? []);
       } catch (err) {
         setError(err instanceof Error ? err.message : "載入失敗");
       } finally {
