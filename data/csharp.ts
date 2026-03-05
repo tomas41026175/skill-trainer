@@ -9,7 +9,7 @@ export const csharpQuestions: Question[] = [
     topic: "值型別 vs 參考型別",
     type: "multiple-choice",
     question: "以下哪個是 C# 的值型別（Value Type）？",
-    options: ["A. string", "B. int", "C. object", "D. List<T>"],
+    options: [{ label: "A", value: "string" }, { label: "B", value: "int" }, { label: "C", value: "object" }, { label: "D", value: "List<T>" }],
     answer: "B",
     explanation:
       "int（以及 double、bool、struct、enum）是值型別，儲存在堆疊（Stack）上，賦值時複製整個值。string、object、class、陣列等是參考型別，儲存在堆積（Heap）上，變數持有的是參考（指標）。",
@@ -35,7 +35,7 @@ export const csharpQuestions: Question[] = [
     topic: "OOP 基礎",
     type: "multiple-choice",
     question: "C# 中，子類別（Derived Class）要呼叫父類別建構子，應使用哪個關鍵字？",
-    options: ["A. super()", "B. parent()", "C. base()", "D. this()"],
+    options: [{ label: "A", value: "super()" }, { label: "B", value: "parent()" }, { label: "C", value: "base()" }, { label: "D", value: "this()" }],
     answer: "C",
     explanation:
       "C# 使用 base 關鍵字呼叫父類別的成員，包括 base() 呼叫父類別建構子，或 base.Method() 呼叫父類別方法。Java/JavaScript 等語言使用 super。",
@@ -62,10 +62,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 中，類別的存取修飾詞 protected 代表什麼？",
     options: [
-      "A. 只有同一個類別內可存取",
-      "B. 同一個組件（Assembly）內可存取",
-      "C. 只有該類別及其子類別可存取",
-      "D. 所有地方都可存取",
+      { label: "A", value: "只有同一個類別內可存取" },
+      { label: "B", value: "同一個組件（Assembly）內可存取" },
+      { label: "C", value: "只有該類別及其子類別可存取" },
+      { label: "D", value: "所有地方都可存取" },
     ],
     answer: "C",
     explanation:
@@ -80,10 +80,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 的 try-catch-finally 中，finally 區塊何時執行？",
     options: [
-      "A. 只有在發生例外時",
-      "B. 只有在沒有例外時",
-      "C. 無論是否發生例外，一定執行",
-      "D. 只有在 catch 捕捉到例外後",
+      { label: "A", value: "只有在發生例外時" },
+      { label: "B", value: "只有在沒有例外時" },
+      { label: "C", value: "無論是否發生例外，一定執行" },
+      { label: "D", value: "只有在 catch 捕捉到例外後" },
     ],
     answer: "C",
     explanation:
@@ -111,10 +111,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 中，Dictionary<string, int> myDict 要取得 key 為 \"age\" 的值，以下哪個方式最安全（不會拋出 KeyNotFoundException）？",
     options: [
-      "A. myDict[\"age\"]",
-      "B. myDict.Get(\"age\")",
-      "C. myDict.TryGetValue(\"age\", out var value)",
-      "D. myDict.Find(\"age\")",
+      { label: "A", value: "myDict[\"age\"]" },
+      { label: "B", value: "myDict.Get(\"age\")" },
+      { label: "C", value: "myDict.TryGetValue(\"age\", out var value)" },
+      { label: "D", value: "myDict.Find(\"age\")" },
     ],
     answer: "C",
     explanation:
@@ -142,10 +142,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 中，sealed 關鍵字用於類別時代表什麼？",
     options: [
-      "A. 類別的所有欄位都是唯讀",
-      "B. 禁止其他類別繼承此類別",
-      "C. 類別只能有一個實例（Singleton）",
-      "D. 類別的方法不能被覆寫",
+      { label: "A", value: "類別的所有欄位都是唯讀" },
+      { label: "B", value: "禁止其他類別繼承此類別" },
+      { label: "C", value: "類別只能有一個實例（Singleton）" },
+      { label: "D", value: "類別的方法不能被覆寫" },
     ],
     answer: "B",
     explanation:
@@ -162,10 +162,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "以下 LINQ 查詢何者正確地將 List<int> numbers 中大於 10 的數字取出並排序？",
     options: [
-      "A. numbers.Filter(n => n > 10).Sort()",
-      "B. numbers.Where(n => n > 10).OrderBy(n => n)",
-      "C. numbers.Select(n => n > 10).OrderBy(n => n)",
-      "D. numbers.Query(n > 10).Sort(n => n)",
+      { label: "A", value: "numbers.Filter(n => n > 10).Sort()" },
+      { label: "B", value: "numbers.Where(n => n > 10).OrderBy(n => n)" },
+      { label: "C", value: "numbers.Select(n => n > 10).OrderBy(n => n)" },
+      { label: "D", value: "numbers.Query(n > 10).Sort(n => n)" },
     ],
     answer: "B",
     explanation:
@@ -180,10 +180,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "LINQ 的 GroupBy 回傳的型別是什麼？",
     options: [
-      "A. IEnumerable<T>",
-      "B. IEnumerable<IGrouping<TKey, TElement>>",
-      "C. Dictionary<TKey, List<TElement>>",
-      "D. ILookup<TKey, TElement>",
+      { label: "A", value: "IEnumerable<T>" },
+      { label: "B", value: "IEnumerable<IGrouping<TKey, TElement>>" },
+      { label: "C", value: "Dictionary<TKey, List<TElement>>" },
+      { label: "D", value: "ILookup<TKey, TElement>" },
     ],
     answer: "B",
     explanation:
@@ -210,10 +210,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 泛型約束 where T : class 的意思是？",
     options: [
-      "A. T 必須是 string 型別",
-      "B. T 必須是參考型別（class）",
-      "C. T 必須實作 IClass 介面",
-      "D. T 必須有無參數建構子",
+      { label: "A", value: "T 必須是 string 型別" },
+      { label: "B", value: "T 必須是參考型別（class）" },
+      { label: "C", value: "T 必須實作 IClass 介面" },
+      { label: "D", value: "T 必須有無參數建構子" },
     ],
     answer: "B",
     explanation:
@@ -241,10 +241,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 中，interface 與 abstract class 最關鍵的差異是？",
     options: [
-      "A. interface 效能比 abstract class 好",
-      "B. 一個類別可以實作多個 interface，但只能繼承一個 abstract class",
-      "C. abstract class 不能有方法實作，interface 可以",
-      "D. interface 只能用於 public 成員",
+      { label: "A", value: "interface 效能比 abstract class 好" },
+      { label: "B", value: "一個類別可以實作多個 interface，但只能繼承一個 abstract class" },
+      { label: "C", value: "abstract class 不能有方法實作，interface 可以" },
+      { label: "D", value: "interface 只能用於 public 成員" },
     ],
     answer: "B",
     explanation:
@@ -272,10 +272,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 中，async void 與 async Task 的主要差異是？",
     options: [
-      "A. async void 執行較快",
-      "B. async void 拋出的例外無法被呼叫方 catch，且不可被 await",
-      "C. async Task 只能在控制器（Controller）中使用",
-      "D. async void 會自動 ConfigureAwait(false)",
+      { label: "A", value: "async void 執行較快" },
+      { label: "B", value: "async void 拋出的例外無法被呼叫方 catch，且不可被 await" },
+      { label: "C", value: "async Task 只能在控制器（Controller）中使用" },
+      { label: "D", value: "async void 會自動 ConfigureAwait(false)" },
     ],
     answer: "B",
     explanation:
@@ -303,10 +303,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "LINQ 的 Select() 與 SelectMany() 的差異是？",
     options: [
-      "A. Select 處理數字，SelectMany 處理字串",
-      "B. Select 一對一投影；SelectMany 將巢狀集合展平（flatten）成一個序列",
-      "C. SelectMany 執行較快",
-      "D. Select 只能用於查詢語法（query syntax）",
+      { label: "A", value: "Select 處理數字，SelectMany 處理字串" },
+      { label: "B", value: "Select 一對一投影；SelectMany 將巢狀集合展平（flatten）成一個序列" },
+      { label: "C", value: "SelectMany 執行較快" },
+      { label: "D", value: "Select 只能用於查詢語法（query syntax）" },
     ],
     answer: "B",
     explanation:
@@ -323,10 +323,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 中，Func<int, int, bool> 代表什麼型別的委派？",
     options: [
-      "A. 接受兩個 bool 參數，回傳 int",
-      "B. 接受兩個 int 參數，回傳 bool",
-      "C. 接受一個 int 參數和一個 bool 參數",
-      "D. 接受三個參數，最後一個是回傳型別",
+      { label: "A", value: "接受兩個 bool 參數，回傳 int" },
+      { label: "B", value: "接受兩個 int 參數，回傳 bool" },
+      { label: "C", value: "接受一個 int 參數和一個 bool 參數" },
+      { label: "D", value: "接受三個參數，最後一個是回傳型別" },
     ],
     answer: "B",
     explanation:
@@ -354,10 +354,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# switch expression（C# 8+）與傳統 switch statement 的主要改進是？",
     options: [
-      "A. switch expression 執行速度較快",
-      "B. switch expression 是表達式（有回傳值），支援更豐富的 pattern matching",
-      "C. switch expression 可以處理更多資料型別",
-      "D. switch expression 不需要 break 語句",
+      { label: "A", value: "switch expression 執行速度較快" },
+      { label: "B", value: "switch expression 是表達式（有回傳值），支援更豐富的 pattern matching" },
+      { label: "C", value: "switch expression 可以處理更多資料型別" },
+      { label: "D", value: "switch expression 不需要 break 語句" },
     ],
     answer: "B",
     explanation:
@@ -385,10 +385,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 的 Span<T> 相較於陣列切片（array slicing）的最大優勢是？",
     options: [
-      "A. Span<T> 可以存在堆積（Heap）上",
-      "B. Span<T> 是零分配（zero-allocation）的記憶體視圖，不複製底層資料",
-      "C. Span<T> 支援多執行緒並行存取",
-      "D. Span<T> 比 Array 支援更多操作方法",
+      { label: "A", value: "Span<T> 可以存在堆積（Heap）上" },
+      { label: "B", value: "Span<T> 是零分配（zero-allocation）的記憶體視圖，不複製底層資料" },
+      { label: "C", value: "Span<T> 支援多執行緒並行存取" },
+      { label: "D", value: "Span<T> 比 Array 支援更多操作方法" },
     ],
     answer: "B",
     explanation:
@@ -416,10 +416,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 的 in 參數修飾詞的作用是？",
     options: [
-      "A. 與 ref 完全相同",
-      "B. 以傳參考方式傳入，但在方法內不允許修改該參數",
-      "C. 標記該參數為輸入驗證",
-      "D. 強制該參數必須先初始化為 null",
+      { label: "A", value: "與 ref 完全相同" },
+      { label: "B", value: "以傳參考方式傳入，但在方法內不允許修改該參數" },
+      { label: "C", value: "標記該參數為輸入驗證" },
+      { label: "D", value: "強制該參數必須先初始化為 null" },
     ],
     answer: "B",
     explanation:
@@ -434,10 +434,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "以下哪個關於 out 參數的描述是正確的？",
     options: [
-      "A. 呼叫方必須先初始化 out 變數才能傳入",
-      "B. 方法內不需對 out 參數賦值",
-      "C. 呼叫方傳入前不需初始化，但方法內必須在所有路徑中賦值",
-      "D. out 參數不能用於泛型方法",
+      { label: "A", value: "呼叫方必須先初始化 out 變數才能傳入" },
+      { label: "B", value: "方法內不需對 out 參數賦值" },
+      { label: "C", value: "呼叫方傳入前不需初始化，但方法內必須在所有路徑中賦值" },
+      { label: "D", value: "out 參數不能用於泛型方法" },
     ],
     answer: "C",
     explanation:
@@ -452,10 +452,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 中 Expression<Func<T, bool>> 與 Func<T, bool> 的差異是？",
     options: [
-      "A. Expression 執行速度較快",
-      "B. Expression 保存了 lambda 的語法樹（expression tree），可被解析轉換（如 SQL）；Func 是已編譯的委派",
-      "C. Expression 只能用於 LINQ to Objects",
-      "D. Func 支援更多參數型別",
+      { label: "A", value: "Expression 執行速度較快" },
+      { label: "B", value: "Expression 保存了 lambda 的語法樹（expression tree），可被解析轉換（如 SQL）；Func 是已編譯的委派" },
+      { label: "C", value: "Expression 只能用於 LINQ to Objects" },
+      { label: "D", value: "Func 支援更多參數型別" },
     ],
     answer: "B",
     explanation:
@@ -470,10 +470,10 @@ export const csharpQuestions: Question[] = [
     type: "multiple-choice",
     question: "C# 9 的 record 型別與一般 class 相比，最主要的內建特性是什麼？",
     options: [
-      "A. record 效能比 class 高 10 倍",
-      "B. record 自動實作基於值的相等性比較（value-based equality）和不可變性",
-      "C. record 不能有方法",
-      "D. record 是密封的（sealed），無法被繼承",
+      { label: "A", value: "record 效能比 class 高 10 倍" },
+      { label: "B", value: "record 自動實作基於值的相等性比較（value-based equality）和不可變性" },
+      { label: "C", value: "record 不能有方法" },
+      { label: "D", value: "record 是密封的（sealed），無法被繼承" },
     ],
     answer: "B",
     explanation:

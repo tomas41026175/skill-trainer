@@ -21,15 +21,13 @@ export default function QuestionCard({
 
   const isCorrect =
     isAnswered && userAnswer !== undefined
-      ? checkAnswer(userAnswer.charAt(0), question.answer)
+      ? checkAnswer(userAnswer, question.answer)
       : false;
 
-  function handleOptionClick(option: string) {
+  function handleOptionClick(label: string) {
     if (isAnswered) return;
-    // Options are stored as "A. ...", answer is stored as "A" — compare only the letter
-    const optionLetter = option.charAt(0);
-    const correct = checkAnswer(optionLetter, question.answer);
-    onAnswer(option, correct);
+    const correct = checkAnswer(label, question.answer);
+    onAnswer(label, correct);
   }
 
   function handleFillSubmit() {
@@ -38,13 +36,12 @@ export default function QuestionCard({
     onAnswer(fillInput, correct);
   }
 
-  function getOptionStyle(option: string): string {
+  function getOptionStyle(label: string): string {
     if (!isAnswered) {
       return "border-slate-200 hover:border-indigo-400 hover:bg-indigo-50 text-slate-700";
     }
-    const optionLetter = option.charAt(0);
-    const isThisCorrect = checkAnswer(optionLetter, question.answer);
-    const isThisSelected = userAnswer === option;
+    const isThisCorrect = checkAnswer(label, question.answer);
+    const isThisSelected = userAnswer === label;
 
     if (isThisCorrect) return "border-green-400 bg-green-50 text-green-800 font-medium";
     if (isThisSelected && !isThisCorrect) return "border-red-400 bg-red-50 text-red-800";
@@ -63,12 +60,13 @@ export default function QuestionCard({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {question.options.map((option) => (
             <button
-              key={option}
-              onClick={() => handleOptionClick(option)}
+              key={option.label}
+              onClick={() => handleOptionClick(option.label)}
               disabled={isAnswered}
-              className={`px-4 py-3 rounded-lg border-2 text-sm text-left transition-all duration-150 disabled:cursor-not-allowed ${getOptionStyle(option)}`}
+              className={`px-4 py-3 rounded-lg border-2 text-sm text-left transition-all duration-150 disabled:cursor-not-allowed ${getOptionStyle(option.label)}`}
             >
-              {option}
+              <span className="font-semibold mr-2">{option.label}.</span>
+              {option.value}
             </button>
           ))}
         </div>
@@ -77,14 +75,14 @@ export default function QuestionCard({
       {/* True / False */}
       {question.type === "true-false" && (
         <div className="flex flex-col sm:flex-row gap-3">
-          {["True", "False"].map((option) => (
+          {["True", "False"].map((opt) => (
             <button
-              key={option}
-              onClick={() => handleOptionClick(option)}
+              key={opt}
+              onClick={() => handleOptionClick(opt)}
               disabled={isAnswered}
-              className={`flex-1 px-6 py-3 rounded-lg border-2 text-sm font-medium transition-all duration-150 disabled:cursor-not-allowed ${getOptionStyle(option)}`}
+              className={`flex-1 px-6 py-3 rounded-lg border-2 text-sm font-medium transition-all duration-150 disabled:cursor-not-allowed ${getOptionStyle(opt)}`}
             >
-              {option}
+              {opt}
             </button>
           ))}
         </div>

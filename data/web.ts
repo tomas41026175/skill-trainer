@@ -11,10 +11,10 @@ export const webQuestions: Question[] = [
     question:
       "CSS Box Model 由內到外的四個層次依序是？",
     options: [
-      "A. content → border → padding → margin",
-      "B. content → padding → border → margin",
-      "C. margin → border → padding → content",
-      "D. padding → content → border → margin",
+      { label: "A", value: "content → border → padding → margin" },
+      { label: "B", value: "content → padding → border → margin" },
+      { label: "C", value: "margin → border → padding → content" },
+      { label: "D", value: "padding → content → border → margin" },
     ],
     answer: "B",
     explanation:
@@ -30,10 +30,10 @@ export const webQuestions: Question[] = [
     question:
       "設定 box-sizing: border-box 後，width: 200px 代表什麼？",
     options: [
-      "A. content 區域寬度為 200px，不含 padding 和 border",
-      "B. content + padding + border 的總寬度為 200px",
-      "C. content + padding + border + margin 的總寬度為 200px",
-      "D. 只有 border 的寬度為 200px",
+      { label: "A", value: "content 區域寬度為 200px，不含 padding 和 border" },
+      { label: "B", value: "content + padding + border 的總寬度為 200px" },
+      { label: "C", value: "content + padding + border + margin 的總寬度為 200px" },
+      { label: "D", value: "只有 border 的寬度為 200px" },
     ],
     answer: "B",
     explanation:
@@ -48,7 +48,7 @@ export const webQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "以下哪個 HTML 標籤最適合用來包裹網站的主要導航連結？",
-    options: ["A. <div>", "B. <section>", "C. <nav>", "D. <header>"],
+    options: [{ label: "A", value: "<div>" }, { label: "B", value: "<section>" }, { label: "C", value: "<nav>" }, { label: "D", value: "<header>" }],
     answer: "C",
     explanation:
       "nav 是 HTML5 語意標籤，專門用於包裹主要導航連結區塊。使用語意標籤的好處：提升 SEO、改善無障礙（screen reader 可以跳到導航）、程式碼可讀性更高。div 沒有語意；section 用於頁面的一個主題區塊；header 用於頁首區域。",
@@ -75,7 +75,7 @@ export const webQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "當 RESTful API 成功建立新資源後，最適合回傳的 HTTP 狀態碼是？",
-    options: ["A. 200 OK", "B. 201 Created", "C. 204 No Content", "D. 202 Accepted"],
+    options: [{ label: "A", value: "200 OK" }, { label: "B", value: "201 Created" }, { label: "C", value: "204 No Content" }, { label: "D", value: "202 Accepted" }],
     answer: "B",
     explanation:
       "201 Created 表示請求成功且新資源已被建立，應在 Location 標頭中回傳新資源的 URL。200 OK 用於一般成功的 GET/PUT 請求；204 No Content 用於成功但沒有回傳內容（如 DELETE）；202 Accepted 用於非同步處理（請求已接受但尚未完成）。",
@@ -103,10 +103,10 @@ export const webQuestions: Question[] = [
     question:
       "以下哪個選擇器可以選取 class 為 'btn' 且 type 屬性為 'submit' 的元素？",
     options: [
-      "A. document.querySelector('btn[type=submit]')",
-      "B. document.querySelector('.btn[type=\"submit\"]')",
-      "C. document.querySelector('#btn type=submit')",
-      "D. document.querySelector('button.submit')",
+      { label: "A", value: "document.querySelector('btn[type=submit]')" },
+      { label: "B", value: "document.querySelector('.btn[type=\"submit\"]')" },
+      { label: "C", value: "document.querySelector('#btn type=submit')" },
+      { label: "D", value: "document.querySelector('button.submit')" },
     ],
     answer: "B",
     explanation:
@@ -122,10 +122,10 @@ export const webQuestions: Question[] = [
     question:
       "document.querySelector() 與 document.querySelectorAll() 的差異是？",
     options: [
-      "A. querySelector 較快，querySelectorAll 較準確",
-      "B. querySelector 回傳第一個匹配元素或 null；querySelectorAll 回傳所有匹配元素的 NodeList",
-      "C. querySelectorAll 只能用於 id 選擇器",
-      "D. 兩者完全相同，只是命名不同",
+      { label: "A", value: "querySelector 較快，querySelectorAll 較準確" },
+      { label: "B", value: "querySelector 回傳第一個匹配元素或 null；querySelectorAll 回傳所有匹配元素的 NodeList" },
+      { label: "C", value: "querySelectorAll 只能用於 id 選擇器" },
+      { label: "D", value: "兩者完全相同，只是命名不同" },
     ],
     answer: "B",
     explanation:
@@ -154,10 +154,10 @@ export const webQuestions: Question[] = [
     question:
       "HTTP 狀態碼 301 和 302 的差異是？",
     options: [
-      "A. 301 是暫時重定向，302 是永久重定向",
-      "B. 301 是永久重定向，302 是暫時重定向",
-      "C. 兩者都是永久重定向，差別在是否快取",
-      "D. 301 用於 GET，302 用於 POST",
+      { label: "A", value: "301 是暫時重定向，302 是永久重定向" },
+      { label: "B", value: "301 是永久重定向，302 是暫時重定向" },
+      { label: "C", value: "兩者都是永久重定向，差別在是否快取" },
+      { label: "D", value: "301 用於 GET，302 用於 POST" },
     ],
     answer: "B",
     explanation:
@@ -175,10 +175,10 @@ export const webQuestions: Question[] = [
     question:
       "在 Flexbox 中，要讓子元素在主軸（main axis）上均勻分佈且兩端不留空白，應使用哪個 justify-content 值？",
     options: [
-      "A. justify-content: center",
-      "B. justify-content: space-between",
-      "C. justify-content: space-around",
-      "D. justify-content: flex-start",
+      { label: "A", value: "justify-content: center" },
+      { label: "B", value: "justify-content: space-between" },
+      { label: "C", value: "justify-content: space-around" },
+      { label: "D", value: "justify-content: flex-start" },
     ],
     answer: "B",
     explanation:
@@ -194,10 +194,10 @@ export const webQuestions: Question[] = [
     question:
       "CSS Grid 與 Flexbox 最主要的應用場景差異是？",
     options: [
-      "A. Flexbox 適合二維版面；Grid 適合一維版面",
-      "B. Grid 適合二維版面（行列同時控制）；Flexbox 適合一維版面（單一方向排列）",
-      "C. Grid 只能用於響應式設計；Flexbox 適合所有情境",
-      "D. 兩者完全等效，只是語法不同",
+      { label: "A", value: "Flexbox 適合二維版面；Grid 適合一維版面" },
+      { label: "B", value: "Grid 適合二維版面（行列同時控制）；Flexbox 適合一維版面（單一方向排列）" },
+      { label: "C", value: "Grid 只能用於響應式設計；Flexbox 適合所有情境" },
+      { label: "D", value: "兩者完全等效，只是語法不同" },
     ],
     answer: "B",
     explanation:
@@ -212,7 +212,7 @@ export const webQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "CORS（Cross-Origin Resource Sharing）的預檢請求（Preflight Request）使用的 HTTP 方法是？",
-    options: ["A. GET", "B. POST", "C. OPTIONS", "D. HEAD"],
+    options: [{ label: "A", value: "GET" }, { label: "B", value: "POST" }, { label: "C", value: "OPTIONS" }, { label: "D", value: "HEAD" }],
     answer: "C",
     explanation:
       "瀏覽器在發送非簡單請求（如帶自訂標頭的 POST、PUT、DELETE）前，會先發送 OPTIONS 請求（預檢）詢問伺服器是否允許此跨域請求。伺服器需回傳 Access-Control-Allow-Origin、Access-Control-Allow-Methods 等標頭表示許可。",
@@ -240,10 +240,10 @@ export const webQuestions: Question[] = [
     question:
       "事件委派（Event Delegation）的核心原理是什麼？",
     options: [
-      "A. 將事件直接綁定到每個子元素上",
-      "B. 利用事件冒泡，在父元素上監聽並判斷事件來源的子元素",
-      "C. 使用 preventDefault() 攔截事件",
-      "D. 在 window 物件上監聽所有事件",
+      { label: "A", value: "將事件直接綁定到每個子元素上" },
+      { label: "B", value: "利用事件冒泡，在父元素上監聽並判斷事件來源的子元素" },
+      { label: "C", value: "使用 preventDefault() 攔截事件" },
+      { label: "D", value: "在 window 物件上監聽所有事件" },
     ],
     answer: "B",
     explanation:
@@ -272,10 +272,10 @@ export const webQuestions: Question[] = [
     question:
       "localStorage 與 sessionStorage 最主要的差異是？",
     options: [
-      "A. localStorage 可存較大資料；sessionStorage 有 1MB 限制",
-      "B. localStorage 資料永久保存直到主動清除；sessionStorage 資料在分頁/瀏覽器關閉後消失",
-      "C. sessionStorage 可跨域存取；localStorage 不行",
-      "D. localStorage 只能存字串；sessionStorage 可存任意型別",
+      { label: "A", value: "localStorage 可存較大資料；sessionStorage 有 1MB 限制" },
+      { label: "B", value: "localStorage 資料永久保存直到主動清除；sessionStorage 資料在分頁/瀏覽器關閉後消失" },
+      { label: "C", value: "sessionStorage 可跨域存取；localStorage 不行" },
+      { label: "D", value: "localStorage 只能存字串；sessionStorage 可存任意型別" },
     ],
     answer: "B",
     explanation:
@@ -304,10 +304,10 @@ export const webQuestions: Question[] = [
     question:
       "CSS Grid 中，grid-template-columns: repeat(3, 1fr) 的意思是？",
     options: [
-      "A. 建立三行，每行高度相等",
-      "B. 建立三欄，每欄寬度佔剩餘空間的 1/3",
-      "C. 第一欄佔 1px，第三欄佔 fr 單位",
-      "D. 建立三欄，每欄最小寬度為 1px",
+      { label: "A", value: "建立三行，每行高度相等" },
+      { label: "B", value: "建立三欄，每欄寬度佔剩餘空間的 1/3" },
+      { label: "C", value: "第一欄佔 1px，第三欄佔 fr 單位" },
+      { label: "D", value: "建立三欄，每欄最小寬度為 1px" },
     ],
     answer: "B",
     explanation:
@@ -338,10 +338,10 @@ export const webQuestions: Question[] = [
     question:
       "瀏覽器的關鍵渲染路徑（Critical Rendering Path）正確的順序是？",
     options: [
-      "A. HTML 解析 → JavaScript 執行 → CSS 解析 → 渲染樹 → 布局 → 繪製",
-      "B. HTML 解析 → CSS 解析（同時）→ 渲染樹（DOM + CSSOM）→ 布局 → 繪製",
-      "C. CSS 解析 → HTML 解析 → 渲染樹 → 繪製 → 布局",
-      "D. DOM 建立 → 渲染樹 → CSSOM 建立 → 布局 → 繪製",
+      { label: "A", value: "HTML 解析 → JavaScript 執行 → CSS 解析 → 渲染樹 → 布局 → 繪製" },
+      { label: "B", value: "HTML 解析 → CSS 解析（同時）→ 渲染樹（DOM + CSSOM）→ 布局 → 繪製" },
+      { label: "C", value: "CSS 解析 → HTML 解析 → 渲染樹 → 繪製 → 布局" },
+      { label: "D", value: "DOM 建立 → 渲染樹 → CSSOM 建立 → 布局 → 繪製" },
     ],
     answer: "B",
     explanation:
@@ -357,10 +357,10 @@ export const webQuestions: Question[] = [
     question:
       "在 HTML 中，為什麼建議將 CSS link 標籤放在 head，JavaScript script 標籤放在 body 結尾？",
     options: [
-      "A. 這只是程式碼風格慣例，沒有效能差異",
-      "B. CSS 在 head 讓渲染樹更早可用；script 在 body 結尾避免阻塞 DOM 解析",
-      "C. JavaScript 在 head 執行順序錯誤",
-      "D. CSS 必須在 HTML 完全載入後才能套用",
+      { label: "A", value: "這只是程式碼風格慣例，沒有效能差異" },
+      { label: "B", value: "CSS 在 head 讓渲染樹更早可用；script 在 body 結尾避免阻塞 DOM 解析" },
+      { label: "C", value: "JavaScript 在 head 執行順序錯誤" },
+      { label: "D", value: "CSS 必須在 HTML 完全載入後才能套用" },
     ],
     answer: "B",
     explanation:
@@ -376,10 +376,10 @@ export const webQuestions: Question[] = [
     question:
       "Service Worker 的主要功能是什麼？",
     options: [
-      "A. 替代 Web Worker 執行 CPU 密集運算",
-      "B. 作為瀏覽器和網路之間的代理，攔截網路請求、實作快取策略、支援離線存取",
-      "C. 管理 DOM 更新，減少 reflow",
-      "D. 提供伺服器端渲染（SSR）功能",
+      { label: "A", value: "替代 Web Worker 執行 CPU 密集運算" },
+      { label: "B", value: "作為瀏覽器和網路之間的代理，攔截網路請求、實作快取策略、支援離線存取" },
+      { label: "C", value: "管理 DOM 更新，減少 reflow" },
+      { label: "D", value: "提供伺服器端渲染（SSR）功能" },
     ],
     answer: "B",
     explanation:
@@ -408,10 +408,10 @@ export const webQuestions: Question[] = [
     question:
       "Core Web Vitals 中，LCP（Largest Contentful Paint）衡量的是什麼？",
     options: [
-      "A. 頁面上最大圖片的檔案大小",
-      "B. 頁面上最大的可見內容元素完成渲染所需的時間",
-      "C. 使用者首次與頁面互動的延遲時間",
-      "D. 頁面布局發生意外位移的累積量",
+      { label: "A", value: "頁面上最大圖片的檔案大小" },
+      { label: "B", value: "頁面上最大的可見內容元素完成渲染所需的時間" },
+      { label: "C", value: "使用者首次與頁面互動的延遲時間" },
+      { label: "D", value: "頁面布局發生意外位移的累積量" },
     ],
     answer: "B",
     explanation:
@@ -427,10 +427,10 @@ export const webQuestions: Question[] = [
     question:
       "以下哪個技術可以有效避免圖片載入造成的 CLS（Cumulative Layout Shift）問題？",
     options: [
-      "A. 使用 lazy loading 延遲載入所有圖片",
-      "B. 在 img 標籤明確指定 width 和 height 屬性",
-      "C. 將所有圖片轉為 WebP 格式",
-      "D. 使用 CSS filter 替代圖片",
+      { label: "A", value: "使用 lazy loading 延遲載入所有圖片" },
+      { label: "B", value: "在 img 標籤明確指定 width 和 height 屬性" },
+      { label: "C", value: "將所有圖片轉為 WebP 格式" },
+      { label: "D", value: "使用 CSS filter 替代圖片" },
     ],
     answer: "B",
     explanation:
@@ -446,10 +446,10 @@ export const webQuestions: Question[] = [
     question:
       "HTTP/2 相較於 HTTP/1.1 最重要的改進是？",
     options: [
-      "A. HTTP/2 使用 UDP 傳輸，速度更快",
-      "B. HTTP/2 支援多路復用（Multiplexing），單一 TCP 連線可並行傳輸多個請求/回應",
-      "C. HTTP/2 取消了 TLS/SSL 加密要求",
-      "D. HTTP/2 將 Header 改為 JSON 格式，更易讀",
+      { label: "A", value: "HTTP/2 使用 UDP 傳輸，速度更快" },
+      { label: "B", value: "HTTP/2 支援多路復用（Multiplexing），單一 TCP 連線可並行傳輸多個請求/回應" },
+      { label: "C", value: "HTTP/2 取消了 TLS/SSL 加密要求" },
+      { label: "D", value: "HTTP/2 將 Header 改為 JSON 格式，更易讀" },
     ],
     answer: "B",
     explanation:
@@ -491,10 +491,10 @@ export const webQuestions: Question[] = [
     question:
       "以下哪個策略最適合讓使用者頭像縮圖（thumbnails）快速顯示，同時讓使用者點擊後的大圖也快速載入？",
     options: [
-      "A. 所有圖片一次全部載入",
-      "B. 使用 loading='lazy' 延遲載入視窗外圖片，並使用 srcset 提供不同解析度版本",
-      "C. 將所有圖片轉為 base64 內嵌在 HTML 中",
-      "D. 只載入縮圖，點擊後再重新請求",
+      { label: "A", value: "所有圖片一次全部載入" },
+      { label: "B", value: "使用 loading='lazy' 延遲載入視窗外圖片，並使用 srcset 提供不同解析度版本" },
+      { label: "C", value: "將所有圖片轉為 base64 內嵌在 HTML 中" },
+      { label: "D", value: "只載入縮圖，點擊後再重新請求" },
     ],
     answer: "B",
     explanation:

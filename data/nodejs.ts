@@ -9,7 +9,7 @@ export const nodejsQuestions: Question[] = [
     topic: "模組系統",
     type: "multiple-choice",
     question: "在 CommonJS 模組系統中，用哪個函式引入模組？",
-    options: ["A. import", "B. require", "C. include", "D. load"],
+    options: [{ label: "A", value: "import" }, { label: "B", value: "require" }, { label: "C", value: "include" }, { label: "D", value: "load" }],
     answer: "B",
     explanation:
       "CommonJS 使用 require() 函式引入模組，這是 Node.js 預設的模組系統。ES Module 才使用 import 語法。",
@@ -36,10 +36,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "執行哪個指令可以初始化一個新的 npm 專案並建立 package.json？",
     options: [
-      "A. npm start",
-      "B. npm install",
-      "C. npm init",
-      "D. npm create",
+      { label: "A", value: "npm start" },
+      { label: "B", value: "npm install" },
+      { label: "C", value: "npm init" },
+      { label: "D", value: "npm create" },
     ],
     answer: "C",
     explanation:
@@ -67,10 +67,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "Node.js 中 callback 函式的第一個參數慣例上代表什麼？",
     options: [
-      "A. 回傳的資料",
-      "B. 錯誤物件（Error-first callback）",
-      "C. HTTP 狀態碼",
-      "D. 函式名稱",
+      { label: "A", value: "回傳的資料" },
+      { label: "B", value: "錯誤物件（Error-first callback）" },
+      { label: "C", value: "HTTP 狀態碼" },
+      { label: "D", value: "函式名稱" },
     ],
     answer: "B",
     explanation:
@@ -85,10 +85,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "fs.readFile 與 fs.readFileSync 最主要的差別是什麼？",
     options: [
-      "A. readFile 只能讀取文字，readFileSync 可讀取二進位",
-      "B. readFile 是非同步（不阻塞），readFileSync 是同步（阻塞）",
-      "C. readFileSync 速度較快",
-      "D. readFile 需要額外安裝套件",
+      { label: "A", value: "readFile 只能讀取文字，readFileSync 可讀取二進位" },
+      { label: "B", value: "readFile 是非同步（不阻塞），readFileSync 是同步（阻塞）" },
+      { label: "C", value: "readFileSync 速度較快" },
+      { label: "D", value: "readFile 需要額外安裝套件" },
     ],
     answer: "B",
     explanation:
@@ -103,10 +103,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "以下哪個程式碼可以建立一個最簡單的 Node.js HTTP server？",
     options: [
-      "A. const server = http.create()",
-      "B. const server = http.createServer((req, res) => {})",
-      "C. const server = new http.Server()",
-      "D. const server = http.listen(3000)",
+      { label: "A", value: "const server = http.create()" },
+      { label: "B", value: "const server = http.createServer((req, res) => {})" },
+      { label: "C", value: "const server = new http.Server()" },
+      { label: "D", value: "const server = http.listen(3000)" },
     ],
     answer: "B",
     explanation:
@@ -133,7 +133,7 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "以下哪個全域物件代表當前 Node.js 行程（process），可用來讀取環境變數？",
-    options: ["A. window", "B. global", "C. process", "D. env"],
+    options: [{ label: "A", value: "window" }, { label: "B", value: "global" }, { label: "C", value: "process" }, { label: "D", value: "env" }],
     answer: "C",
     explanation:
       "process 是 Node.js 的全域物件，process.env 可讀取環境變數，process.argv 可讀取命令列參數，process.exit() 可結束行程。",
@@ -162,10 +162,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "Promise 有哪三種狀態？",
     options: [
-      "A. pending / resolved / error",
-      "B. pending / fulfilled / rejected",
-      "C. waiting / done / failed",
-      "D. idle / success / failure",
+      { label: "A", value: "pending / resolved / error" },
+      { label: "B", value: "pending / fulfilled / rejected" },
+      { label: "C", value: "waiting / done / failed" },
+      { label: "D", value: "idle / success / failure" },
     ],
     answer: "B",
     explanation:
@@ -180,10 +180,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "Promise.all 與 Promise.allSettled 的主要差異是什麼？",
     options: [
-      "A. Promise.all 速度較快",
-      "B. Promise.all 中任一 Promise reject 即整體 reject；Promise.allSettled 等所有 Promise 結束才回傳結果",
-      "C. Promise.allSettled 只處理成功情況",
-      "D. 兩者完全相同",
+      { label: "A", value: "Promise.all 速度較快" },
+      { label: "B", value: "Promise.all 中任一 Promise reject 即整體 reject；Promise.allSettled 等所有 Promise 結束才回傳結果" },
+      { label: "C", value: "Promise.allSettled 只處理成功情況" },
+      { label: "D", value: "兩者完全相同" },
     ],
     answer: "B",
     explanation:
@@ -211,10 +211,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "Node.js Stream 的主要優點是什麼？",
     options: [
-      "A. 程式碼較簡潔",
-      "B. 可以邊讀邊處理資料，不需要把整個檔案載入記憶體",
-      "C. 比 fs.readFile 的 API 更簡單",
-      "D. 只能用於網路傳輸",
+      { label: "A", value: "程式碼較簡潔" },
+      { label: "B", value: "可以邊讀邊處理資料，不需要把整個檔案載入記憶體" },
+      { label: "C", value: "比 fs.readFile 的 API 更簡單" },
+      { label: "D", value: "只能用於網路傳輸" },
     ],
     answer: "B",
     explanation:
@@ -240,7 +240,7 @@ export const nodejsQuestions: Question[] = [
     topic: "EventEmitter",
     type: "multiple-choice",
     question: "使用 EventEmitter 時，哪個方法用來觸發（發射）一個事件？",
-    options: ["A. .trigger()", "B. .dispatch()", "C. .emit()", "D. .fire()"],
+    options: [{ label: "A", value: ".trigger()" }, { label: "B", value: ".dispatch()" }, { label: "C", value: ".emit()" }, { label: "D", value: ".fire()" }],
     answer: "C",
     explanation:
       "EventEmitter 使用 .emit(eventName, ...args) 觸發事件，監聽方使用 .on(eventName, listener) 或 .once(eventName, listener) 訂閱事件。",
@@ -255,10 +255,10 @@ export const nodejsQuestions: Question[] = [
     question:
       "在 async/await 語法中，如何捕捉 await 表達式拋出的錯誤（Promise rejected）？",
     options: [
-      "A. 使用 .catch() 鏈結",
-      "B. 使用 try...catch 包住 await 表達式",
-      "C. 使用 Promise.reject()",
-      "D. await 不會拋出錯誤",
+      { label: "A", value: "使用 .catch() 鏈結" },
+      { label: "B", value: "使用 try...catch 包住 await 表達式" },
+      { label: "C", value: "使用 Promise.reject()" },
+      { label: "D", value: "await 不會拋出錯誤" },
     ],
     answer: "B",
     explanation:
@@ -273,10 +273,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "在 Express 中，middleware 函式的第三個參數 next 的作用是？",
     options: [
-      "A. 取得下一個請求",
-      "B. 將控制權傳遞給下一個 middleware 或路由處理器",
-      "C. 結束回應",
-      "D. 讀取下一行程式碼",
+      { label: "A", value: "取得下一個請求" },
+      { label: "B", value: "將控制權傳遞給下一個 middleware 或路由處理器" },
+      { label: "C", value: "結束回應" },
+      { label: "D", value: "讀取下一行程式碼" },
     ],
     answer: "B",
     explanation:
@@ -319,10 +319,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "Node.js Worker Threads 主要用來解決什麼問題？",
     options: [
-      "A. 替代 async/await 處理非同步 I/O",
-      "B. 在多個執行緒中執行 CPU 密集型運算，避免阻塞主執行緒",
-      "C. 增加 HTTP 連線數量",
-      "D. 管理資料庫連線池",
+      { label: "A", value: "替代 async/await 處理非同步 I/O" },
+      { label: "B", value: "在多個執行緒中執行 CPU 密集型運算，避免阻塞主執行緒" },
+      { label: "C", value: "增加 HTTP 連線數量" },
+      { label: "D", value: "管理資料庫連線池" },
     ],
     answer: "B",
     explanation:
@@ -337,10 +337,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "Worker Threads 間如何共享記憶體？",
     options: [
-      "A. 透過全域變數直接共享",
-      "B. 使用 SharedArrayBuffer 搭配 Atomics",
-      "C. 透過 process.env 傳遞",
-      "D. Worker Threads 無法共享記憶體",
+      { label: "A", value: "透過全域變數直接共享" },
+      { label: "B", value: "使用 SharedArrayBuffer 搭配 Atomics" },
+      { label: "C", value: "透過 process.env 傳遞" },
+      { label: "D", value: "Worker Threads 無法共享記憶體" },
     ],
     answer: "B",
     explanation:
@@ -355,10 +355,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "Node.js cluster 模組的主要用途是什麼？",
     options: [
-      "A. 管理多個資料庫連線",
-      "B. 建立多個 Worker 行程以利用多核心 CPU",
-      "C. 分散式快取管理",
-      "D. 管理 Worker Threads 生命週期",
+      { label: "A", value: "管理多個資料庫連線" },
+      { label: "B", value: "建立多個 Worker 行程以利用多核心 CPU" },
+      { label: "C", value: "分散式快取管理" },
+      { label: "D", value: "管理 Worker Threads 生命週期" },
     ],
     answer: "B",
     explanation:
@@ -386,10 +386,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "以下哪種情況最容易造成 Node.js 記憶體洩漏？",
     options: [
-      "A. 使用 const 宣告變數",
-      "B. 在全域物件上累積新增屬性而不清除，或忘記移除 EventEmitter 的監聽器",
-      "C. 使用 async/await",
-      "D. 讀取大型 JSON 檔案",
+      { label: "A", value: "使用 const 宣告變數" },
+      { label: "B", value: "在全域物件上累積新增屬性而不清除，或忘記移除 EventEmitter 的監聽器" },
+      { label: "C", value: "使用 async/await" },
+      { label: "D", value: "讀取大型 JSON 檔案" },
     ],
     answer: "B",
     explanation:
@@ -417,10 +417,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "Node.js 使用 --inspect 旗標啟動時，主要開啟了什麼功能？",
     options: [
-      "A. 記錄所有 HTTP 請求",
-      "B. 啟用 Chrome DevTools 的遠端偵錯（Remote Debugging）介面",
-      "C. 自動重啟伺服器",
-      "D. 顯示詳細的錯誤堆疊",
+      { label: "A", value: "記錄所有 HTTP 請求" },
+      { label: "B", value: "啟用 Chrome DevTools 的遠端偵錯（Remote Debugging）介面" },
+      { label: "C", value: "自動重啟伺服器" },
+      { label: "D", value: "顯示詳細的錯誤堆疊" },
     ],
     answer: "B",
     explanation:
@@ -447,7 +447,7 @@ export const nodejsQuestions: Question[] = [
     topic: "自訂 Stream",
     type: "multiple-choice",
     question: "實作自訂 Readable Stream 時，必須覆寫（override）哪個方法？",
-    options: ["A. _write()", "B. _read()", "C. _transform()", "D. _flush()"],
+    options: [{ label: "A", value: "_write()" }, { label: "B", value: "_read()" }, { label: "C", value: "_transform()" }, { label: "D", value: "_flush()" }],
     answer: "B",
     explanation:
       "自訂 Readable Stream 必須實作 _read() 方法，在其中使用 this.push(chunk) 推送資料。當 push(null) 被呼叫時代表資料流結束。_write() 是 Writable，_transform() 和 _flush() 是 Transform stream 的方法。",
@@ -461,10 +461,10 @@ export const nodejsQuestions: Question[] = [
     type: "multiple-choice",
     question: "Transform Stream 與 Duplex Stream 的主要差異是？",
     options: [
-      "A. Transform 繼承自 EventEmitter，Duplex 不是",
-      "B. Transform Stream 的輸出是根據輸入計算而來；Duplex Stream 的讀寫端彼此獨立",
-      "C. Duplex 比 Transform 效能更好",
-      "D. Transform 只能處理文字，Duplex 可處理二進位",
+      { label: "A", value: "Transform 繼承自 EventEmitter，Duplex 不是" },
+      { label: "B", value: "Transform Stream 的輸出是根據輸入計算而來；Duplex Stream 的讀寫端彼此獨立" },
+      { label: "C", value: "Duplex 比 Transform 效能更好" },
+      { label: "D", value: "Transform 只能處理文字，Duplex 可處理二進位" },
     ],
     answer: "B",
     explanation:

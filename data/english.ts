@@ -10,7 +10,7 @@ export const englishQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "Choose the correct sentence: She ___ to work every day by bus.",
-    options: ["A. go", "B. goes", "C. is going", "D. went"],
+    options: [{ label: "A", value: "go" }, { label: "B", value: "goes" }, { label: "C", value: "is going" }, { label: "D", value: "went" }],
     answer: "B",
     explanation:
       "主詞為第三人稱單數 She，描述每天例行習慣使用簡單現在式（Simple Present），動詞需加 -s，所以是 goes。go 用於複數主詞；is going 是現在進行式；went 是過去式。",
@@ -25,10 +25,10 @@ export const englishQuestions: Question[] = [
     question:
       "Which sentence uses the past perfect tense correctly?",
     options: [
-      "A. She had finished her report before the meeting started.",
-      "B. She finished her report before the meeting had started.",
-      "C. She has finished her report before the meeting started.",
-      "D. She was finishing her report before the meeting starts.",
+      { label: "A", value: "She had finished her report before the meeting started." },
+      { label: "B", value: "She finished her report before the meeting had started." },
+      { label: "C", value: "She has finished her report before the meeting started." },
+      { label: "D", value: "She was finishing her report before the meeting starts." },
     ],
     answer: "A",
     explanation:
@@ -43,7 +43,7 @@ export const englishQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "Choose the correct preposition: The meeting is scheduled ___ Monday morning.",
-    options: ["A. in", "B. at", "C. on", "D. by"],
+    options: [{ label: "A", value: "in" }, { label: "B", value: "at" }, { label: "C", value: "on" }, { label: "D", value: "by" }],
     answer: "C",
     explanation:
       "介系詞規則：at 用於具體時刻（at 3pm, at noon）；in 用於月份、年份、季節、一天中的時段（in the morning, in 2024）；on 用於具體日期和星期幾（on Monday, on March 5th）。Monday morning 是具體的一天，用 on。",
@@ -57,7 +57,7 @@ export const englishQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "Choose the correct article: He wants to become ___ engineer after graduation.",
-    options: ["A. a", "B. an", "C. the", "D. (no article)"],
+    options: [{ label: "A", value: "a" }, { label: "B", value: "an" }, { label: "C", value: "the" }, { label: "D", value: "(no article)" }],
     answer: "B",
     explanation:
       "不定冠詞 a/an 用於第一次提及的可數名詞單數。a 用於輔音音素開頭的詞，an 用於母音音素開頭的詞。engineer 發音以母音音素 /ɛ/ 開頭，所以用 an。注意是看發音而非字母（an hour, a university）。",
@@ -71,7 +71,7 @@ export const englishQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "Choose the word that best completes the sentence: The new policy will ___ all employees, not just managers.",
-    options: ["A. affect", "B. effect", "C. infect", "D. reflect"],
+    options: [{ label: "A", value: "affect" }, { label: "B", value: "effect" }, { label: "C", value: "infect" }, { label: "D", value: "reflect" }],
     answer: "A",
     explanation:
       "affect（動詞）意為「影響、作用於」，是及物動詞，常見用法 affect someone/something。effect（名詞）意為「效果、結果」（偶爾作動詞用，意為「實現」）。句中需要動詞，且語意為「影響所有員工」，所以選 affect。",
@@ -98,7 +98,7 @@ export const englishQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "Which word correctly fills the blank? The developer ___ the bug within two hours.",
-    options: ["A. fixed", "B. fixd", "C. have fixed", "D. had been fixing"],
+    options: [{ label: "A", value: "fixed" }, { label: "B", value: "fixd" }, { label: "C", value: "have fixed" }, { label: "D", value: "had been fixing" }],
     answer: "A",
     explanation:
       "within two hours 表示在兩小時之內完成，描述過去已完成的動作，用簡單過去式（Simple Past）fixed。have fixed 是現在完成式（需配合現在時間參考）；had been fixing 是過去完成進行式（強調持續過程）。",
@@ -126,10 +126,10 @@ export const englishQuestions: Question[] = [
     question:
       "Choose the correct sentence regarding article usage:",
     options: [
-      "A. She plays the piano every day.",
-      "B. She plays a piano every day.",
-      "C. She plays piano every day.",
-      "D. She plays an piano every day.",
+      { label: "A", value: "She plays the piano every day." },
+      { label: "B", value: "She plays a piano every day." },
+      { label: "C", value: "She plays piano every day." },
+      { label: "D", value: "She plays an piano every day." },
     ],
     answer: "A",
     explanation:
@@ -144,7 +144,7 @@ export const englishQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "Choose the correct word: Please ___ the attached document for your reference.",
-    options: ["A. see", "B. refer to", "C. look", "D. watch"],
+    options: [{ label: "A", value: "see" }, { label: "B", value: "refer to" }, { label: "C", value: "look" }, { label: "D", value: "watch" }],
     answer: "B",
     explanation:
       "refer to（參閱、查閱）是商業書信常用語，適合「請查閱附件」的情境。see 通常用於一般性「看見」；look 需要接 at（look at）；watch 用於動態影像或事物。for your reference（供您參考）也是商業書信常見固定用語。",
@@ -161,10 +161,10 @@ export const englishQuestions: Question[] = [
     question:
       "In software development, what does 'deprecated' mean when used to describe a function or API?",
     options: [
-      "A. The function has a critical security vulnerability.",
-      "B. The function is discouraged from use and may be removed in future versions.",
-      "C. The function is newly introduced and experimental.",
-      "D. The function requires administrator privileges.",
+      { label: "A", value: "The function has a critical security vulnerability." },
+      { label: "B", value: "The function is discouraged from use and may be removed in future versions." },
+      { label: "C", value: "The function is newly introduced and experimental." },
+      { label: "D", value: "The function requires administrator privileges." },
     ],
     answer: "B",
     explanation:
@@ -180,10 +180,10 @@ export const englishQuestions: Question[] = [
     question:
       "What does the term 'latency' refer to in the context of network communication?",
     options: [
-      "A. The maximum data transfer rate of a network",
-      "B. The amount of data lost during transmission",
-      "C. The time delay between sending a request and receiving a response",
-      "D. The number of simultaneous connections a server can handle",
+      { label: "A", value: "The maximum data transfer rate of a network" },
+      { label: "B", value: "The amount of data lost during transmission" },
+      { label: "C", value: "The time delay between sending a request and receiving a response" },
+      { label: "D", value: "The number of simultaneous connections a server can handle" },
     ],
     answer: "C",
     explanation:
@@ -199,10 +199,10 @@ export const englishQuestions: Question[] = [
     question:
       "Identify the grammatical error in this sentence: 'The team have been worked on this feature since last month.'",
     options: [
-      "A. 'team' should be 'teams'",
-      "B. 'have been worked' should be 'has been working'",
-      "C. 'since' should be 'for'",
-      "D. 'this' should be 'these'",
+      { label: "A", value: "'team' should be 'teams'" },
+      { label: "B", value: "'have been worked' should be 'has been working'" },
+      { label: "C", value: "'since' should be 'for'" },
+      { label: "D", value: "'this' should be 'these'" },
     ],
     answer: "B",
     explanation:
@@ -218,10 +218,10 @@ export const englishQuestions: Question[] = [
     question:
       "Read the passage and answer: 'Microservices architecture decomposes an application into small, independently deployable services. Each service runs its own process and communicates through APIs. This approach improves scalability but increases operational complexity.' — What is the main DISADVANTAGE mentioned?",
     options: [
-      "A. Reduced scalability",
-      "B. Difficulty in API communication",
-      "C. Increased operational complexity",
-      "D. Services cannot be deployed independently",
+      { label: "A", value: "Reduced scalability" },
+      { label: "B", value: "Difficulty in API communication" },
+      { label: "C", value: "Increased operational complexity" },
+      { label: "D", value: "Services cannot be deployed independently" },
     ],
     answer: "C",
     explanation:
@@ -250,10 +250,10 @@ export const englishQuestions: Question[] = [
     question:
       "Which sentence uses 'which' and 'that' correctly?",
     options: [
-      "A. The server which crashed yesterday has been restored.",
-      "B. The server that I mentioned, which is located in Singapore, handles API requests.",
-      "C. The server which is located in Singapore handles API requests.",
-      "D. The server that, which was old, was replaced.",
+      { label: "A", value: "The server which crashed yesterday has been restored." },
+      { label: "B", value: "The server that I mentioned, which is located in Singapore, handles API requests." },
+      { label: "C", value: "The server which is located in Singapore handles API requests." },
+      { label: "D", value: "The server that, which was old, was replaced." },
     ],
     answer: "B",
     explanation:
@@ -281,7 +281,7 @@ export const englishQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "Read and answer: 'A REST API uses HTTP methods to perform CRUD operations: GET retrieves data, POST creates new resources, PUT updates existing resources, and DELETE removes them. Each resource is identified by a unique URL endpoint.' — According to the passage, which HTTP method is used to CREATE a new resource?",
-    options: ["A. GET", "B. PUT", "C. POST", "D. DELETE"],
+    options: [{ label: "A", value: "GET" }, { label: "B", value: "PUT" }, { label: "C", value: "POST" }, { label: "D", value: "DELETE" }],
     answer: "C",
     explanation:
       "文章明確說明 POST creates new resources（POST 建立新資源）。GET 取得資料；PUT 更新現有資源；DELETE 刪除資源。CRUD 對應：Create=POST, Read=GET, Update=PUT/PATCH, Delete=DELETE，是 REST API 的基礎概念。",
@@ -309,10 +309,10 @@ export const englishQuestions: Question[] = [
     question:
       "What does 'scalability' mean in the context of software systems?",
     options: [
-      "A. The ability to fix bugs quickly",
-      "B. The ability of a system to handle increasing load by adding resources",
-      "C. The security level of a system",
-      "D. The ease of reading the source code",
+      { label: "A", value: "The ability to fix bugs quickly" },
+      { label: "B", value: "The ability of a system to handle increasing load by adding resources" },
+      { label: "C", value: "The security level of a system" },
+      { label: "D", value: "The ease of reading the source code" },
     ],
     answer: "B",
     explanation:
@@ -330,10 +330,10 @@ export const englishQuestions: Question[] = [
     question:
       "Read the passage and answer: 'The CAP theorem states that a distributed system cannot simultaneously guarantee all three of the following: Consistency (every read receives the most recent write), Availability (every request receives a response), and Partition Tolerance (the system continues operating despite network partitions). In practice, since network partitions are inevitable, distributed systems must choose between consistency and availability.' — What does the author imply by saying 'network partitions are inevitable'?",
     options: [
-      "A. Network partitions can be completely prevented with proper infrastructure.",
-      "B. Developers should prioritize availability over consistency in all cases.",
-      "C. Real-world distributed systems must accept network failures and make trade-offs.",
-      "D. CAP theorem only applies to systems without proper monitoring.",
+      { label: "A", value: "Network partitions can be completely prevented with proper infrastructure." },
+      { label: "B", value: "Developers should prioritize availability over consistency in all cases." },
+      { label: "C", value: "Real-world distributed systems must accept network failures and make trade-offs." },
+      { label: "D", value: "CAP theorem only applies to systems without proper monitoring." },
     ],
     answer: "C",
     explanation:
@@ -348,7 +348,7 @@ export const englishQuestions: Question[] = [
     type: "multiple-choice",
     question:
       "Which word best replaces 'use' in a formal technical document? 'We ___ a binary search algorithm to improve lookup efficiency.'",
-    options: ["A. use", "B. employ", "C. do", "D. make"],
+    options: [{ label: "A", value: "use" }, { label: "B", value: "employ" }, { label: "C", value: "do" }, { label: "D", value: "make" }],
     answer: "B",
     explanation:
       "employ（採用、運用）比 use 更正式，適合技術文件、學術論文。其他正式替換詞：utilize（利用）、implement（實作）、leverage（善用）、adopt（採用）。技術寫作中避免過於口語的詞彙，use 雖正確但較非正式。",
@@ -363,10 +363,10 @@ export const englishQuestions: Question[] = [
     question:
       "Read and infer: 'Legacy codebases often suffer from tight coupling, where components are heavily interdependent. This makes it difficult to modify one component without risking unintended side effects in others. Modern software design advocates for loose coupling through dependency injection and interface-based programming.' — What is the author's implicit recommendation for legacy code?",
     options: [
-      "A. Rewrite all legacy code immediately.",
-      "B. Introduce dependency injection and interface-based design to reduce interdependence.",
-      "C. Avoid modifying legacy codebases entirely.",
-      "D. Use tight coupling for better performance.",
+      { label: "A", value: "Rewrite all legacy code immediately." },
+      { label: "B", value: "Introduce dependency injection and interface-based design to reduce interdependence." },
+      { label: "C", value: "Avoid modifying legacy codebases entirely." },
+      { label: "D", value: "Use tight coupling for better performance." },
     ],
     answer: "B",
     explanation:
@@ -382,10 +382,10 @@ export const englishQuestions: Question[] = [
     question:
       "In a professional email, which phrase best expresses that a deadline has passed and you need an update?",
     options: [
-      "A. 'Why haven't you finished yet?'",
-      "B. 'I wanted to follow up on the status of the deliverable that was due last Friday.'",
-      "C. 'You are late. Send me the work.'",
-      "D. 'Please hurry up with your work.'",
+      { label: "A", value: "'Why haven't you finished yet?'" },
+      { label: "B", value: "'I wanted to follow up on the status of the deliverable that was due last Friday.'" },
+      { label: "C", value: "'You are late. Send me the work.'" },
+      { label: "D", value: "'Please hurry up with your work.'" },
     ],
     answer: "B",
     explanation:
@@ -401,10 +401,10 @@ export const englishQuestions: Question[] = [
     question:
       "In API documentation, what does it mean when a parameter is marked as 'optional with a default value of null'?",
     options: [
-      "A. The parameter must always be provided.",
-      "B. The parameter can be omitted; if not provided, the system treats it as null.",
-      "C. The parameter only accepts null as its value.",
-      "D. The parameter will cause an error if set to null.",
+      { label: "A", value: "The parameter must always be provided." },
+      { label: "B", value: "The parameter can be omitted; if not provided, the system treats it as null." },
+      { label: "C", value: "The parameter only accepts null as its value." },
+      { label: "D", value: "The parameter will cause an error if set to null." },
     ],
     answer: "B",
     explanation:
@@ -433,10 +433,10 @@ export const englishQuestions: Question[] = [
     question:
       "Which sentence best demonstrates correct use of the subjunctive mood in a formal recommendation?",
     options: [
-      "A. 'It is important that the system updates itself automatically.'",
-      "B. 'It is important that the system update itself automatically.'",
-      "C. 'It is important that the system would update itself automatically.'",
-      "D. 'It is important that the system is updating itself automatically.'",
+      { label: "A", value: "'It is important that the system updates itself automatically.'" },
+      { label: "B", value: "'It is important that the system update itself automatically.'" },
+      { label: "C", value: "'It is important that the system would update itself automatically.'" },
+      { label: "D", value: "'It is important that the system is updating itself automatically.'" },
     ],
     answer: "B",
     explanation:
@@ -465,10 +465,10 @@ export const englishQuestions: Question[] = [
     question:
       "In a technical proposal, which phrase most professionally conveys that a solution has trade-offs?",
     options: [
-      "A. 'This solution is not perfect.'",
-      "B. 'This approach involves certain trade-offs between performance and maintainability that warrant careful consideration.'",
-      "C. 'This solution might have some problems.'",
-      "D. 'Be careful because this solution could fail.'",
+      { label: "A", value: "'This solution is not perfect.'" },
+      { label: "B", value: "'This approach involves certain trade-offs between performance and maintainability that warrant careful consideration.'" },
+      { label: "C", value: "'This solution might have some problems.'" },
+      { label: "D", value: "'Be careful because this solution could fail.'" },
     ],
     answer: "B",
     explanation:
@@ -484,10 +484,10 @@ export const englishQuestions: Question[] = [
     question:
       "In a library's changelog: 'This release introduces breaking changes to the public API. Consumers must update their integration code accordingly.' What does 'breaking changes' mean?",
     options: [
-      "A. Changes that fix critical bugs",
-      "B. Changes that improve performance significantly",
-      "C. Changes that are incompatible with previous versions and require code updates",
-      "D. Changes that add new optional features",
+      { label: "A", value: "Changes that fix critical bugs" },
+      { label: "B", value: "Changes that improve performance significantly" },
+      { label: "C", value: "Changes that are incompatible with previous versions and require code updates" },
+      { label: "D", value: "Changes that add new optional features" },
     ],
     answer: "C",
     explanation:

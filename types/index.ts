@@ -9,7 +9,7 @@ export interface Question {
   topic: string;
   type: QuestionType;
   question: string;
-  options?: string[];
+  options?: { label: string; value: string }[];
   answer: string | string[];
   explanation: string;
   tags: string[];
