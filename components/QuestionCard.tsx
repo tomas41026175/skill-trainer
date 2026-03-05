@@ -21,12 +21,14 @@ export default function QuestionCard({
 
   const isCorrect =
     isAnswered && userAnswer !== undefined
-      ? checkAnswer(userAnswer, question.answer)
+      ? checkAnswer(userAnswer.charAt(0), question.answer)
       : false;
 
   function handleOptionClick(option: string) {
     if (isAnswered) return;
-    const correct = checkAnswer(option, question.answer);
+    // Options are stored as "A. ...", answer is stored as "A" — compare only the letter
+    const optionLetter = option.charAt(0);
+    const correct = checkAnswer(optionLetter, question.answer);
     onAnswer(option, correct);
   }
 
@@ -40,7 +42,8 @@ export default function QuestionCard({
     if (!isAnswered) {
       return "border-slate-200 hover:border-indigo-400 hover:bg-indigo-50 text-slate-700";
     }
-    const isThisCorrect = checkAnswer(option, question.answer);
+    const optionLetter = option.charAt(0);
+    const isThisCorrect = checkAnswer(optionLetter, question.answer);
     const isThisSelected = userAnswer === option;
 
     if (isThisCorrect) return "border-green-400 bg-green-50 text-green-800 font-medium";
