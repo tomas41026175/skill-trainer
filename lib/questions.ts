@@ -12,6 +12,8 @@ async function loadBank(category: Category): Promise<Question[]> {
       return (await import("@/data/english")).englishQuestions;
     case "web":
       return (await import("@/data/web")).webQuestions;
+    case "frontend":
+      return (await import("@/data/frontend")).frontendQuestions;
   }
 }
 
