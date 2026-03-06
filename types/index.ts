@@ -1,4 +1,4 @@
-export type Category = "nodejs" | "csharp" | "english" | "web";
+export type Category = "nodejs" | "csharp" | "english" | "web" | "frontend";
 export type Difficulty = "beginner" | "intermediate" | "advanced";
 export type QuestionType = "multiple-choice" | "fill-blank" | "true-false";
 
@@ -85,5 +85,12 @@ export const CATEGORIES: CategoryInfo[] = [
     description: "HTML、CSS、HTTP、DOM、Browser API",
     color: "bg-orange-500",
     icon: "◈",
+  },
+  {
+    id: "frontend",
+    label: "Frontend Engineering",
+    description: "狀態機設計、元件 API、TypeScript 型別、效能直覺",
+    color: "bg-rose-500",
+    icon: "⬡",
   },
 ];
